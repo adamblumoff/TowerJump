@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/movement.cs.meta
+guid: dce9515a0c73ed949a44a0998e47dd64
+========
+guid: ac1eb05af6d391b4eb0f4c070a99f1d0
+>>>>>>>> c0232bedf9c4c0a7360f481d7c9a3950739aa239:Assets/TextMesh Pro/Examples & Extras/Scripts/DropdownSample.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
