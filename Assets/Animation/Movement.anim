@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle
+  m_Name: Movement
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: a225b6f3ac6a28d459a63f145e865817, type: 2}
-    - time: 0.083333336
-      value: {fileID: 21300000, guid: 7440843c0185e6644828e1e22632ec33, type: 2}
+      value: {fileID: 21300000, guid: 96fdebe86eb3456448fd58403173ab68, type: 2}
+    - time: 0.05
+      value: {fileID: 21300000, guid: a4e736fea49fe6c44aad95e93cb71a50, type: 2}
+    - time: 0.11666667
+      value: {fileID: 21300000, guid: 32bafc2fdb7700044aee892e637a5c84, type: 2}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 442a89537eb07b642a4186164d0e5dec, type: 2}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,14 +50,16 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: a225b6f3ac6a28d459a63f145e865817, type: 2}
-    - {fileID: 21300000, guid: 7440843c0185e6644828e1e22632ec33, type: 2}
+    - {fileID: 21300000, guid: 96fdebe86eb3456448fd58403173ab68, type: 2}
+    - {fileID: 21300000, guid: a4e736fea49fe6c44aad95e93cb71a50, type: 2}
+    - {fileID: 21300000, guid: 32bafc2fdb7700044aee892e637a5c84, type: 2}
+    - {fileID: 21300000, guid: 442a89537eb07b642a4186164d0e5dec, type: 2}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.73333335
+    m_StopTime: 0.18333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -72,11 +78,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.73333335
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []
