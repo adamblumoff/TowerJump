@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c6471d244b7666c4f8377c2323074772
+=======
+guid: c19bc7479c62d4589a1a6c5c9e246510
+>>>>>>> bd260ac9774288247c53b3b3c6b53d883768480a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +47,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> bd260ac9774288247c53b3b3c6b53d883768480a
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +129,32 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
+<<<<<<< HEAD
     sprites: []
+=======
+    sprites:
+    - serializedVersion: 2
+      name: ninjaenemy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 840
+        height: 886
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7223fae44a1549a3a6d7d8f9f3932fa
+      internalID: -1161642186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+>>>>>>> bd260ac9774288247c53b3b3c6b53d883768480a
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +165,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< HEAD
     nameFileIdTable: {}
+=======
+    nameFileIdTable:
+      ninjaenemy_0: -1161642186
+>>>>>>> bd260ac9774288247c53b3b3c6b53d883768480a
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
