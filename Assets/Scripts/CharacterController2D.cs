@@ -3,15 +3,13 @@ using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
-	[SerializeField] private float JumpForce = 400f;							// Amount of force added when the player jumps.
-	[Range(0, 1)] [SerializeField] private float CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
+	[SerializeField] private float JumpForce = 300f;							// Amount of force added when the player jumps.
 	[Range(0, .3f)] [SerializeField] private float MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool AirControl = false;							// Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask WhatIsGround;							// A mask determining what is ground to the character
 	[SerializeField] private Transform GroundCheck;							// A position marking where to check if the player is grounded.
 	[SerializeField] private Transform CeilingCheck;							// A position marking where to check for ceilings
-	[SerializeField] private Collider2D CrouchDisableCollider;				// A collider that will be disabled when crouching
-				// A collider that will be disabled when crouching
+	
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool Grounded;            // Whether or not the player is grounded.
@@ -58,37 +56,12 @@ public class CharacterController2D : MonoBehaviour
 	}
 
 
-	public void Move(float move, bool crouch, bool jump)
+	public void Move(float move, bool jump, bool shooting)
 	{
-		// If crouching, check to see if the character can stand up
-		if (!crouch)
-		{
-			// If the character has a ceiling preventing them from standing up, keep them crouching
-			if (Physics2D.OverlapCircle(CeilingCheck.position, k_CeilingRadius, WhatIsGround))
-			{
-				crouch = true;
-			}
-		}
 
 		//only control the player if grounded or airControl is turned on
 		if (Grounded || AirControl)
 		{
-
-			// If crouching
-			if (crouch)
-			{
-				// Reduce the speed by the crouchSpeed multiplier
-				move *= CrouchSpeed;
-
-				// Disable one of the colliders when crouching
-				if (CrouchDisableCollider != null)
-					CrouchDisableCollider.enabled = false;
-			} else
-			{
-				// Enable the collider when not crouching
-				if (CrouchDisableCollider != null)
-					CrouchDisableCollider.enabled = true;
-			}
 
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
