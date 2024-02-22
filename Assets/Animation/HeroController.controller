@@ -95,7 +95,7 @@ AnimatorStateMachine:
     m_Position: {x: 540, y: -240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1298035653575641689}
-    m_Position: {x: 1050, y: -240, z: 0}
+    m_Position: {x: 870, y: -240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6813855870280359829}
     m_Position: {x: 880, y: 110, z: 0}
@@ -226,6 +226,12 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: isDead
     m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Bullet
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
