@@ -17,21 +17,18 @@ public class Bullet : MonoBehaviour
     
     void Update()
     {
-        shootBullet();
+        StartCoroutine(shootBullet());
     }
-    private void shootBullet()
+    private IEnumerator shootBullet()
     {
-        bulletTimer-=Time.deltaTime;
-        GameObject myBulletPrefabClone = GetComponent<GameObject>();
         if(Input.GetButtonDown("Fire1"))
         {
             bulletAnimator.SetTrigger("Bullet");
-            myBulletPrefabClone = Instantiate(myBullet, transform.position, Quaternion.identity);
+            GameObject myBulletPrefabClone = Instantiate(myBullet, transform.position, Quaternion.identity);
             Rigidbody2D myBulletPrefabRigidBody = myBulletPrefabClone.GetComponent<Rigidbody2D>();
             myBulletPrefabRigidBody.AddForce(Vector3.forward*myBulletSpeed, ForceMode2D.Impulse);
-            
-        }
-        if(bulletTimer<=0)
             Destroy(myBulletPrefabClone);
+            yield return new WaitForSeconds(2);
+        }
     }
 }
