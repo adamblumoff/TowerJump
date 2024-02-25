@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraTracking : MonoBehaviour
+public class SpikeFunction : MonoBehaviour
 {
-    public GameObject player;
+    // Reference to megaman
+    GameObject megagman;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("megaman_sprites_0"); // The player
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(0, player.transform.position.y +2, -11);
+        
     }
 }
