@@ -43,11 +43,6 @@ public class PlayerMovement : MonoBehaviour {
 			jump = true;
 			animator.SetBool("IsJumping", true);
 		}
-		else if (Input.GetButtonUp("Jump"))
-		{
-			jump = false;
-			animator.SetBool("IsJumping", false);
-		}
 		
 	}
 	private void ShootingAnimation()

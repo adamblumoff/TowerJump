@@ -6,29 +6,32 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject myBullet;
-    public Animator bulletAnimator;
-    public float myBulletSpeed = 100f;
+    public float speed = 20f;
+	public int damage = 40;
+	public Rigidbody2D rb;
+	private float timer;
 
-    public Transform myBulletSpawner;
+	// Use this for initialization
+	void Start () 
+	{
+		rb.velocity = transform.right * speed;
+	}
 
-    public float bulletTimer = 3;
-
-    
-    void Update()
-    {
-        StartCoroutine(shootBullet());
-    }
-    private IEnumerator shootBullet()
-    {
-        if(Input.GetButtonDown("Fire1"))
-        {
-            bulletAnimator.SetTrigger("Bullet");
-            GameObject myBulletPrefabClone = Instantiate(myBullet, transform.position, Quaternion.identity);
-            Rigidbody2D myBulletPrefabRigidBody = myBulletPrefabClone.GetComponent<Rigidbody2D>();
-            myBulletPrefabRigidBody.AddForce(Vector3.forward*myBulletSpeed, ForceMode2D.Impulse);
-            Destroy(myBulletPrefabClone);
-            yield return new WaitForSeconds(2);
-        }
-    }
+	void Update()
+	{
+		timer += Time.deltaTime;
+		if(timer>2)
+		{
+			Destroy(gameObject);
+		}
+	}
+	void OnTriggerEnter2D (Collider2D hitInfo)
+	{
+		if(hitInfo.gameObject.CompareTag("Enemy"))
+		{
+			EnemyController enemy = hitInfo.GetComponent<EnemyController>();
+			enemy.TakeDamage(damage);
+			Destroy(gameObject);
+		}
+	}
 }

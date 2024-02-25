@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: c6471d244b7666c4f8377c2323074772
-=======
-guid: c19bc7479c62d4589a1a6c5c9e246510
->>>>>>> bd260ac9774288247c53b3b3c6b53d883768480a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,15 +39,11 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> bd260ac9774288247c53b3b3c6b53d883768480a
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +63,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -93,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,48 +121,260 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
-    sprites: []
-=======
     sprites:
     - serializedVersion: 2
       name: ninjaenemy_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 840
-        height: 886
+        x: 16
+        y: 765
+        width: 70
+        height: 88
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7223fae44a1549a3a6d7d8f9f3932fa
-      internalID: -1161642186
+      spriteID: d3b4e60cccec43c49af739d88df70c8b
+      internalID: 1739412672
       vertices: []
       indices: 
       edges: []
       weights: []
->>>>>>> bd260ac9774288247c53b3b3c6b53d883768480a
+    - serializedVersion: 2
+      name: ninjaenemy_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 765
+        width: 70
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 6, z: 6, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3fa06fcd62f58c419c068e76ac7a2b7
+      internalID: -435650279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninjaenemy_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 764
+        width: 70
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 6, z: 6, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf50f562cbdf801469dc2160df77616d
+      internalID: 1824953107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninjaenemy_3
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 765
+        width: 70
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 6, z: 6, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d09d85bf2237741a32ab23e9908e53
+      internalID: -813941188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninjaenemy_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 767
+        width: 70
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 6, z: 6, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6ef8b913c37b141bf0c1429959195b
+      internalID: -1588182172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninjaenemy_5
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 767
+        width: 70
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 6, z: 6, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056e02363264a2a4ca561574b733426c
+      internalID: -1131821948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninjaenemy_6
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 765
+        width: 70
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 6, z: 6, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f259ea241cf72c746868855041fd91b6
+      internalID: 1810198040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninjaenemy_7
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 766
+        width: 70
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 6, z: 6, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac4ad0208625be4ebdedc3cee057665
+      internalID: 1747854693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninjaenemy_8
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 765
+        width: 70
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 6, z: 6, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31eaa5ee0940b92458e3ed2528ef256e
+      internalID: 865031972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninjaenemy_9
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 766
+        width: 70
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 6, z: 6, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3658deebe6688fb4a83da8b88d49d5bb
+      internalID: -1736117493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninjaenemy_10
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 766
+        width: 70
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 6, z: 6, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722f147688605ee4bb2b1b4831c3505c
+      internalID: -1276029585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: fd34165c5cd6d8840b1d733bfb73a147
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
-    nameFileIdTable: {}
-=======
     nameFileIdTable:
-      ninjaenemy_0: -1161642186
->>>>>>> bd260ac9774288247c53b3b3c6b53d883768480a
+      ninjaenemy_0: 1739412672
+      ninjaenemy_1: -435650279
+      ninjaenemy_10: -1276029585
+      ninjaenemy_2: 1824953107
+      ninjaenemy_3: -813941188
+      ninjaenemy_4: -1588182172
+      ninjaenemy_5: -1131821948
+      ninjaenemy_6: 1810198040
+      ninjaenemy_7: 1747854693
+      ninjaenemy_8: 865031972
+      ninjaenemy_9: -1736117493
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

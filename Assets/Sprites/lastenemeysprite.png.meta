@@ -121,7 +121,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: lastenemeysprite_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 552
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619850490154d2346a269cd89f3e9239
+      internalID: -1397542359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lastenemeysprite_1
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 550
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba57f35bff59ee34fb36f9f0e52f7fe7
+      internalID: 2040194237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lastenemeysprite_2
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 553
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4806ece9d98107d4489369648f611c57
+      internalID: 1040890533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lastenemeysprite_3
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 554
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afdbca29940e254fa0742872094577f
+      internalID: -318191979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lastenemeysprite_4
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 554
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62747a3fcb7ae0c4cb723d70f90c001e
+      internalID: -681689599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lastenemeysprite_5
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 553
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e057390522596b14c81cd8ae700a28b7
+      internalID: -607246993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lastenemeysprite_6
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 557
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b7b1dfa37295644ad53e586d36b793
+      internalID: -696692996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lastenemeysprite_7
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 554
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a365675affebd644ab21279393329607
+      internalID: -1444814386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lastenemeysprite_8
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 555
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ec1d94d2a7acb41b515b39dcd7c97a
+      internalID: -750075352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lastenemeysprite_9
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 557
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01c7282845bd1449b6f7c72ef6c1af8
+      internalID: -2039561670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lastenemeysprite_10
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 557
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b98265dd7505b34b982f84756e65af0
+      internalID: 1762294255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lastenemeysprite_11
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 555
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e61f9de1fc3f3a40957fa4d32c3311e
+      internalID: 826316597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lastenemeysprite_12
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 555
+        width: 80
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 7, z: 7, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6bed0486afb2f4ab024ececc6fb16f
+      internalID: -816137335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +405,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lastenemeysprite_0: -1397542359
+      lastenemeysprite_1: -419662763
+      lastenemeysprite_10: -1115839852
+      lastenemeysprite_11: 151368530
+      lastenemeysprite_12: 1548017225
+      lastenemeysprite_2: 444954206
+      lastenemeysprite_3: 1996436554
+      lastenemeysprite_4: 923099585
+      lastenemeysprite_5: -2071875806
+      lastenemeysprite_6: 926094493
+      lastenemeysprite_7: 1990031779
+      lastenemeysprite_8: 1422495699
+      lastenemeysprite_9: -1184608242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

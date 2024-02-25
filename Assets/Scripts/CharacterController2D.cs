@@ -9,7 +9,7 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private LayerMask WhatIsGround;							// A mask determining what is ground to the character
 	[SerializeField] private Transform GroundCheck;							// A position marking where to check if the player is grounded.
 	[SerializeField] private Transform CeilingCheck;							// A position marking where to check for ceilings
-	
+	public float health = 100f;
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool Grounded;            // Whether or not the player is grounded.
@@ -17,6 +17,8 @@ public class CharacterController2D : MonoBehaviour
 	private Rigidbody2D Rigidbody2D;
 	private bool FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 velocity = Vector3.zero;
+	private Animator playerAnimiator;
+	private bool dead = false;
 
 
 	[Header("Events")]
@@ -34,6 +36,8 @@ public class CharacterController2D : MonoBehaviour
 
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
+
+		playerAnimiator = GetComponent<Animator>();
 	}
 
 	private void FixedUpdate()
@@ -53,6 +57,9 @@ public class CharacterController2D : MonoBehaviour
 					OnLandEvent.Invoke();
 			}
 		}
+		
+		if(dead)
+			DieAnimation();
 	}
 
 
@@ -88,6 +95,7 @@ public class CharacterController2D : MonoBehaviour
 			Grounded = false;
 			Rigidbody2D.AddForce(new Vector2(0f, JumpForce));
 		}
+		
 	}
 
 
@@ -96,9 +104,24 @@ public class CharacterController2D : MonoBehaviour
 		// Switch the way the player is labelled as facing.
 		FacingRight = !FacingRight;
 
-		// Multiply the player's x local scale by -1.
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
+		transform.Rotate(0f,180f,0f);
+	}
+	public void TakeDamage (int damage)
+	{
+		health -= damage;
+
+		if (health <= 0)
+		{
+			dead= true;
+		}
+	}
+	private void DieAnimation()
+	{
+		playerAnimiator.SetBool("isDead", true);
+	}
+
+	void Die ()
+	{
+		Destroy(gameObject);
 	}
 }
