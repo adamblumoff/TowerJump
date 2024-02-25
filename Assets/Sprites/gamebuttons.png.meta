@@ -43,13 +43,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 17, y: 200, z: 384, w: 35}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -121,18 +121,150 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: gamebuttons_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 72
+        width: 83
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 2, y: 2, z: 3, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf51266ab96c4a4384c73d20db4b4d3
+      internalID: -423044009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamebuttons_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 74
+        width: 83
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 2, y: 2, z: 3, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb0fb7b9a35c4063af0e18976cea05d
+      internalID: 1625256516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamebuttons_2
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 39
+        width: 83
+        height: 29
+      alignment: 9
+      pivot: {x: 1.4045962, y: 0.45851848}
+      border: {x: 2, y: 2, z: 3, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53738f79a183540cf83c6ff46c159a0c
+      internalID: 57196646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamebuttons_3
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 72
+        width: 83
+        height: 29
+      alignment: 9
+      pivot: {x: 1.4045962, y: 0.45851848}
+      border: {x: 2, y: 2, z: 3, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e4c16f040254be1a736550b3830ab3
+      internalID: -1502878104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamebuttons_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 211
+        width: 83
+        height: 29
+      alignment: 9
+      pivot: {x: 1.4045962, y: 0.45851848}
+      border: {x: 0, y: 2, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e945911240d4469b285544e6420754
+      internalID: -397699443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gamebuttons_5
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 217
+        width: 83
+        height: 29
+      alignment: 9
+      pivot: {x: 1.4045962, y: 0.45851848}
+      border: {x: 38, y: 2, z: 22, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f614e7989b54b0eb9106999cdb6d1c
+      internalID: 87578901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gamebuttons_0: -423044009
+      gamebuttons_1: 1625256516
+      gamebuttons_2: 57196646
+      gamebuttons_3: -1502878104
+      gamebuttons_4: -397699443
+      gamebuttons_5: 87578901
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
