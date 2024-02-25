@@ -131,7 +131,7 @@ TextureImporter:
         width: 83
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 2, y: 2, z: 3, w: 4}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
         width: 83
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 2, y: 2, z: 3, w: 4}
       outline: []
       physicsShape: []
@@ -231,13 +231,13 @@ TextureImporter:
       name: gamebuttons_5
       rect:
         serializedVersion: 2
-        x: 319
-        y: 217
-        width: 83
-        height: 29
+        x: 357
+        y: 221
+        width: 23
+        height: 21
       alignment: 9
       pivot: {x: 1.4045962, y: 0.45851848}
-      border: {x: 38, y: 2, z: 22, w: 4}
+      border: {x: 0, y: 0, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
