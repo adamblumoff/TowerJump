@@ -115,7 +115,7 @@ public class CharacterController2D : MonoBehaviour
 			dead= true;
 		}
 	}
-	private void DieAnimation()
+	public void DieAnimation()
 	{
 		playerAnimiator.SetBool("isDead", true);
 	}

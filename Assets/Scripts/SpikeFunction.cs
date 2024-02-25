@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class SpikeFunction : MonoBehaviour
 {
-    // Reference to megaman
-    GameObject megagman;
 
-    // Start is called before the first frame update
-    void Start()
+    private int damage = 100;
+
+
+    void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        
+        Debug.Log("Collision Detected");
+        if (hitInfo.gameObject.CompareTag("Megaman"))
+        {
+           CharacterController2D player = hitInfo.GetComponent<CharacterController2D>();
+           player.TakeDamage(damage);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
