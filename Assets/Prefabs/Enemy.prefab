@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &161641037197359295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8254708609879638792}
+  m_Layer: 0
+  m_Name: BulletSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8254708609879638792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161641037197359295}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.22, y: -0.71, z: -0.094310746}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2150451697673182600}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1829522742406317836
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,6 +107,7 @@ GameObject:
   - component: {fileID: 8553271931060637106}
   - component: {fileID: 8745091745589385815}
   - component: {fileID: 2496841771198385620}
+  - component: {fileID: 1629145668592838903}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -98,6 +130,7 @@ Transform:
   m_Children:
   - {fileID: 8622774166266365984}
   - {fileID: 2463458713250743048}
+  - {fileID: 8254708609879638792}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1431891385179541139
@@ -259,4 +292,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftEndpoint: {fileID: 0}
   RightEndpoint: {fileID: 0}
+  health: 100
   speed: 12
+--- !u!114 &1629145668592838903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864384359268278384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25c01757c90a0c43aee92e919cea44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpawner: {fileID: 8254708609879638792}
+  bulletPrefab: {fileID: 4507998709644134548, guid: ef4884dccda5f0843b61af482d652c20, type: 3}
+  enemyAnimator: {fileID: 4247215590996217325}

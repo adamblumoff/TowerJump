@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-public class Bullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     public float speed = 20f;
-	public int damage = 40;
+	public int damage;
 	public Rigidbody2D rb;
 	private float timer;
 
@@ -27,12 +25,6 @@ public class Bullet : MonoBehaviour
 	}
 	void OnTriggerEnter2D (Collider2D hitInfo)
 	{
-		if(hitInfo.gameObject.CompareTag("Enemy"))
-		{
-			EnemyController enemy = hitInfo.GetComponent<EnemyController>();
-			enemy.TakeDamage(damage);
-			Destroy(gameObject);
-		}
 		if(hitInfo.gameObject.CompareTag("Player"))
 		{
 			CharacterController2D player = hitInfo.GetComponent<CharacterController2D>();
@@ -41,4 +33,5 @@ public class Bullet : MonoBehaviour
 		}
 
 	}
+    
 }
