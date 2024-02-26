@@ -48,8 +48,12 @@ public class EnemyController : MonoBehaviour
 		}
 		if(distance<.5f)
 			rb.velocity = stop;
-		if(dead)
+		if(dead){
 			DieAnimation();
+			dead = false;
+		}
+			
+		
 		
 	}
 	private void flip()

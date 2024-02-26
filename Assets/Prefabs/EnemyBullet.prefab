@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  damage: 100
+  damage: 20
   rb: {fileID: 8625476472971099292}
 --- !u!61 &3553322184200508431
 BoxCollider2D:

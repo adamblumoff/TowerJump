@@ -15,7 +15,7 @@ public class EnemyGun : MonoBehaviour
 	void Update () {
 		if (enemyAnimator.GetBool("isShooting") == true)
         {
-            if (count == 30){
+            if (count == 45){
                 Shoot();
                 count = 0;
             }

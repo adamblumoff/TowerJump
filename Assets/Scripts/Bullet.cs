@@ -33,12 +33,6 @@ public class Bullet : MonoBehaviour
 			enemy.TakeDamage(damage);
 			Destroy(gameObject);
 		}
-		if(hitInfo.gameObject.CompareTag("Player"))
-		{
-			CharacterController2D player = hitInfo.GetComponent<CharacterController2D>();
-			player.TakeDamage(damage);
-			Destroy(gameObject);
-		}
 
 	}
 }

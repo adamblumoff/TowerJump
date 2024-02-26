@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -30,7 +32,7 @@ public class CharacterController2D : MonoBehaviour
 	public class BoolEvent : UnityEvent<bool> { }
 
 
-	private void Awake()
+	void Awake()
 	{
 		Rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -40,7 +42,7 @@ public class CharacterController2D : MonoBehaviour
 		playerAnimiator = GetComponent<Animator>();
 	}
 
-	private void FixedUpdate()
+	void Update()
 	{
 		bool wasGrounded = Grounded;
 		Grounded = false;
@@ -58,8 +60,10 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 		
-		if(dead)
+		if(dead){
 			DieAnimation();
+			dead = false;
+		}
 	}
 
 
@@ -112,16 +116,17 @@ public class CharacterController2D : MonoBehaviour
 
 		if (health <= 0)
 		{
-			dead= true;
+			dead = true;
 		}
 	}
-	public void DieAnimation()
+	private void DieAnimation()
 	{
 		playerAnimiator.SetBool("isDead", true);
 	}
 
-	void Die ()
+	public void MegamanDie()
 	{
-		Destroy(gameObject);
+		string currentSceneName = SceneManager.GetActiveScene().name;
+		SceneManager.LoadScene(currentSceneName);
 	}
 }
