@@ -198,6 +198,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7864384359268278384, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1100134701}
+    - targetCorrespondingSourceObject: {fileID: 7864384359268278384, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1100134710}
   m_SourcePrefab: {fileID: 100100000, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
 --- !u!4 &332422635 stripped
 Transform:
@@ -711,7 +714,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemapPrefabs:
   - {fileID: 514208642910867649, guid: 8da07facb7352804180d2c1251b64fcb, type: 3}
+  - {fileID: 3866112773676681268, guid: 737e7732739493e448f6524c1b78b501, type: 3}
   player: {fileID: 1100134700}
+--- !u!255 &1100134710
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100134692}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 3861433343826990507, guid: 0e931656947351344aec059ba74eceb5, type: 3}
+  m_BreakForce: 500
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -1.2, y: 0.6}
+  m_DampingRatio: 0
+  m_Frequency: 0
 --- !u!1 &1800786743
 GameObject:
   m_ObjectHideFlags: 0
