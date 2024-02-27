@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &217129746
+--- !u!1001 &54361061
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -149,11 +149,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2150451697673182600, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 2150451697673182600, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 2150451697673182600, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
       propertyPath: m_LocalPosition.z
@@ -187,6 +187,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6906251366938903900, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906251366938903900, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7864384359268278384, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
       propertyPath: m_Name
       value: megaman_sprites_0
@@ -197,10 +205,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7864384359268278384, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1100134701}
-    - targetCorrespondingSourceObject: {fileID: 7864384359268278384, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1100134710}
+      addedObject: {fileID: 1144431953}
   m_SourcePrefab: {fileID: 100100000, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
 --- !u!4 &332422635 stripped
 Transform:
@@ -690,51 +695,31 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1100134692 stripped
+--- !u!1 &1144431943 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7864384359268278384, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
-  m_PrefabInstance: {fileID: 217129746}
+  m_PrefabInstance: {fileID: 54361061}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1100134700 stripped
+--- !u!4 &1144431952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2150451697673182600, guid: d7aca3f78d7c0c348a1ad990730fb419, type: 3}
-  m_PrefabInstance: {fileID: 217129746}
+  m_PrefabInstance: {fileID: 54361061}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1100134701
+--- !u!114 &1144431953
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100134692}
+  m_GameObject: {fileID: 1144431943}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ebba65906edf7a428745b57f88c77e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tilemapPrefabs:
-  - {fileID: 514208642910867649, guid: 8da07facb7352804180d2c1251b64fcb, type: 3}
-  - {fileID: 3866112773676681268, guid: 737e7732739493e448f6524c1b78b501, type: 3}
-  player: {fileID: 1100134700}
---- !u!255 &1100134710
-FixedJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100134692}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 3861433343826990507, guid: 0e931656947351344aec059ba74eceb5, type: 3}
-  m_BreakForce: 500
-  m_BreakTorque: Infinity
-  m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -1.2, y: 0.6}
-  m_DampingRatio: 0
-  m_Frequency: 0
+  - {fileID: 3866112773676681268, guid: 86d9cd19f7b60054c881cb70c35231a1, type: 3}
+  player: {fileID: 1144431952}
 --- !u!1 &1800786743
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab68eddac6669849a8b7773914ed44e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1100134692}
+  player: {fileID: 1144431943}
 --- !u!1001 &8605749348383387394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3398,5 +3383,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1800786746}
-  - {fileID: 217129746}
   - {fileID: 8605749348383387394}
+  - {fileID: 54361061}
