@@ -1,51 +1,77 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class MovingTileFunction : MonoBehaviour
 {
     public GameObject LeftEndpoint;
     public GameObject RightEndpoint;
+    public GameObject player; // Assign this via the Inspector or dynamically
 
     private Transform currentPoint;
     private Rigidbody2D rb;
-    public float speed;
+    private Vector2 lastPosition;
+    public float speed = 5;
+    private bool isPlayerOnPlatform = false;
     private bool right = true;
-    // Start is called before the first frame update
+
     void Start()
     {
         currentPoint = RightEndpoint.transform;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(speed, 0);
+        lastPosition = rb.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        Vector2 currentPosition = rb.position;
+        Vector2 deltaPosition = currentPosition - lastPosition;
+
+        if (isPlayerOnPlatform)
+        {
+            // Apply the platform's movement delta to the player
+            player.transform.position += new Vector3(deltaPosition.x, deltaPosition.y, 0);
+        }
+
+        // Existing logic to change direction at endpoints
         float distance = Vector2.Distance(transform.position, currentPoint.position);
-
-        if (currentPoint == RightEndpoint.transform)
+        if (distance < .5f)
         {
-            rb.velocity = new Vector2(speed, 0);
+            if (currentPoint == RightEndpoint.transform && right)
+            {
+                SwitchDirection(ref right, LeftEndpoint.transform, -speed);
+            }
+            else if (currentPoint == LeftEndpoint.transform && !right)
+            {
+                SwitchDirection(ref right, RightEndpoint.transform, speed);
+            }
         }
-        else
-            rb.velocity = new Vector2(-speed, 0);
 
-        if (distance < .5f && currentPoint == RightEndpoint.transform && right)
+        lastPosition = currentPosition; // Update lastPosition for the next frame
+    }
+
+    void SwitchDirection(ref bool direction, Transform newTarget, float newSpeed)
+    {
+        direction = !direction;
+        currentPoint = newTarget;
+        rb.velocity = new Vector2(newSpeed, 0);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject == player)
         {
-            right = false;
-            Debug.Log("Endpoint reached");
-            currentPoint = LeftEndpoint.transform;
-            rb.velocity = new Vector2(-speed, 0);
-            Debug.Log("turned around" + rb.velocity + " endpoint is" + currentPoint);
+            Debug.Log("trigger");
+            isPlayerOnPlatform = true;
         }
-        if (distance < .5f && currentPoint == LeftEndpoint.transform && !right)
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject == player)
         {
-            right = true;
-            currentPoint = RightEndpoint.transform;
-            rb.velocity = new Vector2(speed, 0);
+            isPlayerOnPlatform = false;
         }
     }
 }
