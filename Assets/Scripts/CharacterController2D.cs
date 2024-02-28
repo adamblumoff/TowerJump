@@ -12,6 +12,8 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Transform GroundCheck;							// A position marking where to check if the player is grounded.
 	[SerializeField] private Transform CeilingCheck;							// A position marking where to check for ceilings
 	public float health = 100f;
+	public float airFactor;
+
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool Grounded;            // Whether or not the player is grounded.
@@ -99,6 +101,27 @@ public class CharacterController2D : MonoBehaviour
 			Grounded = false;
 			Rigidbody2D.AddForce(new Vector2(0f, JumpForce));
 		}
+		if(!Grounded)
+		{
+			// Move the character by finding the target velocity
+			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
+			// And then smoothing it out and applying it to the character
+			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref velocity, MovementSmoothing) * airFactor;
+
+			// If the input is moving the player right and the player is facing left...
+			if (move > 0 && !FacingRight)
+			{
+				// ... flip the player.
+				Flip();
+			}
+			// Otherwise if the input is moving the player left and the player is facing right...
+			else if (move < 0 && FacingRight)
+			{
+				// ... flip the player.
+				Flip();
+			}
+		}
+
 		
 	}
 
@@ -122,11 +145,5 @@ public class CharacterController2D : MonoBehaviour
 	private void DieAnimation()
 	{
 		playerAnimiator.SetBool("isDead", true);
-	}
-
-	public void MegamanDie()
-	{
-		string currentSceneName = SceneManager.GetActiveScene().name;
-		SceneManager.LoadScene(currentSceneName);
 	}
 }

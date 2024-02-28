@@ -8,6 +8,7 @@ public class EnemyGun : MonoBehaviour
     public Transform bulletSpawner;
 	public GameObject bulletPrefab;
     public Animator enemyAnimator;
+    public float invertedBulletRate;
     
     private int count;
 	
@@ -15,7 +16,7 @@ public class EnemyGun : MonoBehaviour
 	void Update () {
 		if (enemyAnimator.GetBool("isShooting") == true)
         {
-            if (count == 45){
+            if (count == invertedBulletRate){
                 Shoot();
                 count = 0;
             }
