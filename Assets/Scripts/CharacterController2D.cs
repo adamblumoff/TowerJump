@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -154,4 +155,18 @@ public class CharacterController2D : MonoBehaviour
 		Rigidbody2D.velocity = stop;
 		playerAnimiator.SetBool("isDead", true);
 	}
+<<<<<<< HEAD
+=======
+
+	public void MegamanDie()
+	{
+		string currentSceneName = SceneManager.GetActiveScene().name;
+		SceneManager.LoadScene(currentSceneName);
+	}
+
+    public bool AccessDead()
+    {
+		return dead;
+    }
+>>>>>>> 35df4f3d1ead79540e804b665ac6408c1f52b783
 }
