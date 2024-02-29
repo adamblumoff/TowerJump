@@ -10211,6 +10211,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1629145668592838903, guid: 870de9461fc111642bb116a41859208b, type: 3}
+      propertyPath: invertedBulletRate
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 2150451697673182600, guid: 870de9461fc111642bb116a41859208b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3

@@ -132,13 +132,8 @@ public class CharacterController2D : MonoBehaviour
 	private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
-		if(FacingRight)
-		{
-			spriteRenderer.flipX = true;
-		}
-		else	
-			spriteRenderer.flipX = false;
 		FacingRight = !FacingRight;
+		transform.Rotate(0f, 180f, 0f);
 
 	}
 	public void TakeDamage (int damage)
