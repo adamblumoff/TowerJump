@@ -24,15 +24,13 @@ public class MovingTileFunction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
+    }
+
+    private void FixedUpdate()
+    {
         float distance = Vector2.Distance(transform.position, currentPoint.position);
-
-        if (currentPoint == RightEndpoint.transform)
-        {
-            rb.velocity = new Vector2(speed, 0);
-        }
-        else
-            rb.velocity = new Vector2(-speed, 0);
-
+        Debug.Log(distance);
         if (distance < .5f && currentPoint == RightEndpoint.transform && right)
         {
             right = false;
@@ -41,11 +39,14 @@ public class MovingTileFunction : MonoBehaviour
             rb.velocity = new Vector2(-speed, 0);
             Debug.Log("turned around" + rb.velocity + " endpoint is" + currentPoint);
         }
-        if (distance < .5f && currentPoint == LeftEndpoint.transform && !right)
+        else if (distance < .5f && currentPoint == LeftEndpoint.transform && !right)
         {
+
             right = true;
             currentPoint = RightEndpoint.transform;
             rb.velocity = new Vector2(speed, 0);
+            Debug.Log("turned around" + rb.velocity + " endpoint is" + currentPoint);
+
         }
     }
 }
