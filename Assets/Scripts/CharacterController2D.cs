@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -129,4 +130,9 @@ public class CharacterController2D : MonoBehaviour
 		string currentSceneName = SceneManager.GetActiveScene().name;
 		SceneManager.LoadScene(currentSceneName);
 	}
+
+    public bool AccessDead()
+    {
+		return dead;
+    }
 }

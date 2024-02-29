@@ -23,7 +23,7 @@ public class MovingTileFunction : MonoBehaviour
         lastPosition = rb.position;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         Vector2 currentPosition = rb.position;
         Vector2 deltaPosition = currentPosition - lastPosition;
@@ -32,7 +32,14 @@ public class MovingTileFunction : MonoBehaviour
         {
             // Apply the platform's movement delta to the player
             player.transform.position += new Vector3(deltaPosition.x, deltaPosition.y, 0);
+            
+            Debug.Log("position changed" + player.transform.position + " " + rb.transform.position);
         }
+        lastPosition = currentPosition;
+    }
+    void FixedUpdate()
+    {
+       
 
         // Existing logic to change direction at endpoints
         float distance = Vector2.Distance(transform.position, currentPoint.position);
@@ -47,8 +54,6 @@ public class MovingTileFunction : MonoBehaviour
                 SwitchDirection(ref right, RightEndpoint.transform, speed);
             }
         }
-
-        lastPosition = currentPosition; // Update lastPosition for the next frame
     }
 
     void SwitchDirection(ref bool direction, Transform newTarget, float newSpeed)
@@ -60,7 +65,7 @@ public class MovingTileFunction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("trigger");
             isPlayerOnPlatform = true;
