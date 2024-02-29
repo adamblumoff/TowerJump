@@ -10,6 +10,7 @@ public class TileMapManager : MonoBehaviour
     private float tilemapHeight = 35f; // Height of the tilemap section
     private float renderOffset = 9f; // Units from the top of the tilemap to render the next one 
     private float tilesRendered = 0; // Track number of tiles rendered
+    private int index = 0;
     private void Start()
     {
         // Initialize the nextInstantiateY based on the player's starting Y position
@@ -31,7 +32,12 @@ public class TileMapManager : MonoBehaviour
     {
 
         // Select a random prefab from the array
-        GameObject prefabToInstantiate = tilemapPrefabs[UnityEngine.Random.Range(0, tilemapPrefabs.Length)];
+        GameObject prefabToInstantiate = tilemapPrefabs[index];
+        if(index == 3)
+        {
+            index = 0;
+        }
+        index++;
 
         // Calculate the new Y position for the next section
         float instantiateY = nextInstantiateY + renderOffset;
