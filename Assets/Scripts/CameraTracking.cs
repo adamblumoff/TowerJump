@@ -1,20 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraTracking : MonoBehaviour
 {
     public GameObject player;
+    private CharacterController2D controllerInstance;
+    public float smoothTime = .3F; // Smoothness of the camera movement
+    private Vector3 currentVelocity = Vector3.zero; // Used by SmoothDamp
+    private float previousYPosition;
+    
 
-    // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("megaman_sprites_0"); // The player
+        controllerInstance = FindObjectOfType<CharacterController2D>();
+        previousYPosition = player.transform.position.y;
+
+       
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(0, player.transform.position.y +2, -11);
+       
+       
+
+        // Proceed to adjust the camera's position only if the character is not dead
+       previousYPosition = transform.position.y;
+       float targetYPosition = Mathf.Max(player.transform.position.y, transform.position.y);
+       if(player.transform.position.y - targetYPosition < -5)
+       {
+            ReloadScene();
+       }
+       // Determine the target position for the camera. Only Y is updated for rising effect
+       Vector3 targetPosition = new Vector3(transform.position.x, targetYPosition, transform.position.z);
+
+       // Smoothly transition to the target position
+       transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref currentVelocity, smoothTime);
+    }
+
+    void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

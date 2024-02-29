@@ -292,7 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftEndpoint: {fileID: 0}
   RightEndpoint: {fileID: 0}
-  health: 100
+  health: 20
   speed: 12
 --- !u!114 &1629145668592838903
 MonoBehaviour:
