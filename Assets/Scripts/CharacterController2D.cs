@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -24,7 +26,9 @@ public class CharacterController2D : MonoBehaviour
 	private Vector3 stop = Vector3.zero;
 	private Animator playerAnimiator;
 	private bool dead = false;
-	private SpriteRenderer spriteRenderer;
+	private ScoreManager scoreManager;
+	private float y_position;
+	private float current_y_position;
 
 
 	[Header("Events")]
@@ -44,11 +48,14 @@ public class CharacterController2D : MonoBehaviour
 			OnLandEvent = new UnityEvent();
 
 		playerAnimiator = GetComponent<Animator>();
-		spriteRenderer = GetComponent<SpriteRenderer>();
+		scoreManager = GetComponent<ScoreManager>();
+		y_position = transform.position.y;
+		
 	}
 
 	void Update()
 	{
+		current_y_position = transform.position.y;
 		bool wasGrounded = Grounded;
 		Grounded = false;
 
@@ -69,6 +76,11 @@ public class CharacterController2D : MonoBehaviour
 			DieAnimation();
 			dead = false;
 		}
+		if(current_y_position>y_position)
+		{
+			scoreManager.AddScore(1);
+			y_position = current_y_position;
+		}
 	}
 
 
@@ -78,6 +90,12 @@ public class CharacterController2D : MonoBehaviour
 		//only control the player if grounded or airControl is turned on
 		if (Grounded || AirControl)
 		{
+
+			// Move the character by finding the target velocity
+			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
+			// And then smoothing it out and applying it to the character
+			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref stop, MovementSmoothing);
+
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !FacingRight)
 			{
@@ -90,13 +108,6 @@ public class CharacterController2D : MonoBehaviour
 				// ... flip the player.
 				Flip();
 			}
-
-			// Move the character by finding the target velocity
-			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
-			// And then smoothing it out and applying it to the character
-			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref stop, MovementSmoothing);
-
-			
 		}
 		// If the player should jump...
 		if (Grounded && jump)
@@ -107,7 +118,11 @@ public class CharacterController2D : MonoBehaviour
 		}
 		if(!Grounded)
 		{
-			
+			// Move the character by finding the target velocity
+			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
+			// And then smoothing it out and applying it to the character
+			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref stop, MovementSmoothing) * airFactor;
+
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !FacingRight)
 			{
@@ -120,12 +135,6 @@ public class CharacterController2D : MonoBehaviour
 				// ... flip the player.
 				Flip();
 			}
-			// Move the character by finding the target velocity
-			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
-			// And then smoothing it out and applying it to the character
-			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref stop, MovementSmoothing) * airFactor;
-
-			
 		}
 
 		
@@ -136,8 +145,7 @@ public class CharacterController2D : MonoBehaviour
 	{
 		// Switch the way the player is labelled as facing.
 		FacingRight = !FacingRight;
-		
-		transform.Rotate(new Vector3(0,180,0));
+		transform.Rotate(0f, 180f, 0f);
 
 	}
 	public void TakeDamage (int damage)
@@ -151,6 +159,7 @@ public class CharacterController2D : MonoBehaviour
 	}
 	private void DieAnimation()
 	{
+		Rigidbody2D.velocity = stop;
 		playerAnimiator.SetBool("isDead", true);
 	}
 	public void MegamanDie()
@@ -158,4 +167,5 @@ public class CharacterController2D : MonoBehaviour
 		string currentSceneName = SceneManager.GetActiveScene().name;
 		SceneManager.LoadScene(currentSceneName);
 	}
+
 }

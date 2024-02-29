@@ -365,7 +365,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A-S to move. \nSpace bar to jump. \nClick mouse to shoot. \nKill the enemy
+  m_text: "A-S to run. \nSpace bar to jump. \nClick mouse to shoot. \nKill the enemies
     and don't die!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
