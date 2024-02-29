@@ -78,12 +78,6 @@ public class CharacterController2D : MonoBehaviour
 		//only control the player if grounded or airControl is turned on
 		if (Grounded || AirControl)
 		{
-
-			// Move the character by finding the target velocity
-			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
-			// And then smoothing it out and applying it to the character
-			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref stop, MovementSmoothing);
-
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !FacingRight)
 			{
@@ -96,6 +90,13 @@ public class CharacterController2D : MonoBehaviour
 				// ... flip the player.
 				Flip();
 			}
+
+			// Move the character by finding the target velocity
+			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
+			// And then smoothing it out and applying it to the character
+			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref stop, MovementSmoothing);
+
+			
 		}
 		// If the player should jump...
 		if (Grounded && jump)
@@ -106,11 +107,7 @@ public class CharacterController2D : MonoBehaviour
 		}
 		if(!Grounded)
 		{
-			// Move the character by finding the target velocity
-			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
-			// And then smoothing it out and applying it to the character
-			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref stop, MovementSmoothing) * airFactor;
-
+			
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !FacingRight)
 			{
@@ -123,6 +120,12 @@ public class CharacterController2D : MonoBehaviour
 				// ... flip the player.
 				Flip();
 			}
+			// Move the character by finding the target velocity
+			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
+			// And then smoothing it out and applying it to the character
+			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref stop, MovementSmoothing) * airFactor;
+
+			
 		}
 
 		
@@ -132,13 +135,9 @@ public class CharacterController2D : MonoBehaviour
 	private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
-		if(FacingRight)
-		{
-			spriteRenderer.flipX = true;
-		}
-		else	
-			spriteRenderer.flipX = false;
 		FacingRight = !FacingRight;
+		
+		transform.Rotate(new Vector3(0,180,0));
 
 	}
 	public void TakeDamage (int damage)
@@ -152,7 +151,6 @@ public class CharacterController2D : MonoBehaviour
 	}
 	private void DieAnimation()
 	{
-		Rigidbody2D.velocity = stop;
 		playerAnimiator.SetBool("isDead", true);
 	}
 	public void MegamanDie()

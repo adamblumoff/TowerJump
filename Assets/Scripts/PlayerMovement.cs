@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour {
 			JumpingAnimation();
 			ShootingAnimation();
 		}
+		else
+			horizontalMove = 0f;
 		
 	}
 
