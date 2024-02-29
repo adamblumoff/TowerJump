@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilemapPrefabs:
-  - {fileID: 3866112773676681268, guid: 86d9cd19f7b60054c881cb70c35231a1, type: 3}
+  - {fileID: 3866112773676681268, guid: a30cdacd4d91d654eb9c658ce07e4f75, type: 3}
   player: {fileID: 1144431952}
 --- !u!1 &1800786743
 GameObject:
@@ -511,8 +511,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1144431943}
   smoothTime: 0.3
+<<<<<<< HEAD
   riseSpeed: 0.000001
 >>>>>>> 35df4f3d1ead79540e804b665ac6408c1f52b783
+=======
+>>>>>>> 6a150c04373f83b01df3836c01bde1407b45adb8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
