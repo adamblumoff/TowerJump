@@ -6,11 +6,12 @@ public class Gun : MonoBehaviour
 {
     public Transform bulletSpawner;
 	public GameObject bulletPrefab;
+	public Animator animator;
 
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.GetButtonDown("Fire1") )
 		{
 			Shoot();
 		}
@@ -18,7 +19,8 @@ public class Gun : MonoBehaviour
 
 	void Shoot ()
 	{
-		Instantiate(bulletPrefab, bulletSpawner.position, bulletSpawner.rotation);
+		if(!animator.GetBool("isDead"))
+			Instantiate(bulletPrefab, bulletSpawner.position, bulletSpawner.rotation);
 	}
 }
    

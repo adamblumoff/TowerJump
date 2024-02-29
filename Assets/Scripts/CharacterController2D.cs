@@ -20,9 +20,10 @@ public class CharacterController2D : MonoBehaviour
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
 	private Rigidbody2D Rigidbody2D;
 	private bool FacingRight = true;  // For determining which way the player is currently facing.
-	private Vector3 velocity = Vector3.zero;
+	private Vector3 stop = Vector3.zero;
 	private Animator playerAnimiator;
 	private bool dead = false;
+	private SpriteRenderer spriteRenderer;
 
 
 	[Header("Events")]
@@ -42,6 +43,7 @@ public class CharacterController2D : MonoBehaviour
 			OnLandEvent = new UnityEvent();
 
 		playerAnimiator = GetComponent<Animator>();
+		spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
 	void Update()
@@ -79,7 +81,7 @@ public class CharacterController2D : MonoBehaviour
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
 			// And then smoothing it out and applying it to the character
-			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref velocity, MovementSmoothing);
+			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref stop, MovementSmoothing);
 
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !FacingRight)
@@ -106,7 +108,7 @@ public class CharacterController2D : MonoBehaviour
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
 			// And then smoothing it out and applying it to the character
-			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref velocity, MovementSmoothing) * airFactor;
+			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref stop, MovementSmoothing) * airFactor;
 
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !FacingRight)
@@ -129,9 +131,14 @@ public class CharacterController2D : MonoBehaviour
 	private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
+		if(FacingRight)
+		{
+			spriteRenderer.flipX = true;
+		}
+		else	
+			spriteRenderer.flipX = false;
 		FacingRight = !FacingRight;
 
-		transform.Rotate(0f,180f,0f);
 	}
 	public void TakeDamage (int damage)
 	{
@@ -144,6 +151,7 @@ public class CharacterController2D : MonoBehaviour
 	}
 	private void DieAnimation()
 	{
+		Rigidbody2D.velocity = stop;
 		playerAnimiator.SetBool("isDead", true);
 	}
 }

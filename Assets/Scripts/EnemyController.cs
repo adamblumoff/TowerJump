@@ -34,7 +34,7 @@ public class EnemyController : MonoBehaviour
 		else
 			rb.velocity = new Vector2(-speed, 0);
 		
-		if(distance<.5f && currentPoint == RightEndpoint.transform && right)
+		if(distance <.5f && currentPoint == RightEndpoint.transform && right)
 		{
 			right = false;
 			flip();
@@ -48,10 +48,8 @@ public class EnemyController : MonoBehaviour
 		}
 		if(distance<.5f)
 			rb.velocity = stop;
-		if(dead){
-			DieAnimation();
-			dead = false;
-		}
+		isDead();
+		
 			
 		
 		
@@ -79,6 +77,7 @@ public class EnemyController : MonoBehaviour
 		enemyAnimator.SetBool("isRunning", true);
 		currentPoint = LeftEndpoint.transform;
 		rb.velocity = new Vector2(-speed, 0);
+	
 
 	}
 	private IEnumerator StopAndShootRight()
@@ -92,8 +91,14 @@ public class EnemyController : MonoBehaviour
 		rb.velocity = new Vector2(speed, 0);
 
 	}
-
-
+	public void isDead()
+	{
+		if(dead)
+		{
+			DieAnimation();
+			dead = false;
+		}
+	}
 	private void DieAnimation()
 	{
 		rb.velocity = stop;
