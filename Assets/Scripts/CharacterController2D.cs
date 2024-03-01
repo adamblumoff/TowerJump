@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -24,7 +26,9 @@ public class CharacterController2D : MonoBehaviour
 	private Vector3 stop = Vector3.zero;
 	private Animator playerAnimiator;
 	private bool dead = false;
-	private SpriteRenderer spriteRenderer;
+	private ScoreManager scoreManager;
+	private float y_position;
+	private float current_y_position;
 
 
 	[Header("Events")]
@@ -44,11 +48,14 @@ public class CharacterController2D : MonoBehaviour
 			OnLandEvent = new UnityEvent();
 
 		playerAnimiator = GetComponent<Animator>();
-		spriteRenderer = GetComponent<SpriteRenderer>();
+		scoreManager = GetComponent<ScoreManager>();
+		y_position = transform.position.y;
+		
 	}
 
 	void Update()
 	{
+		current_y_position = transform.position.y;
 		bool wasGrounded = Grounded;
 		Grounded = false;
 
@@ -68,6 +75,11 @@ public class CharacterController2D : MonoBehaviour
 		if(dead){
 			DieAnimation();
 			dead = false;
+		}
+		if(current_y_position>y_position)
+		{
+			scoreManager.AddScore(1);
+			y_position = current_y_position;
 		}
 	}
 
@@ -155,4 +167,5 @@ public class CharacterController2D : MonoBehaviour
 		string currentSceneName = SceneManager.GetActiveScene().name;
 		SceneManager.LoadScene(currentSceneName);
 	}
+
 }

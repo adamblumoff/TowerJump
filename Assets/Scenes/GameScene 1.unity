@@ -209,26 +209,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Megaman
       objectReference: {fileID: 0}
-    - target: {fileID: 2541742183492447526, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
-      propertyPath: tilemapPrefabs.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541742183492447526, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
-      propertyPath: tilemapPrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 3866112773676681268, guid: 223a5238a80348542898bb316114ee50, type: 3}
-    - target: {fileID: 2541742183492447526, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
-      propertyPath: tilemapPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 3866112773676681268, guid: 86d9cd19f7b60054c881cb70c35231a1, type: 3}
-    - target: {fileID: 2541742183492447526, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
-      propertyPath: tilemapPrefabs.Array.data[2]
-      value: 
-      objectReference: {fileID: 3866112773676681268, guid: da82eb4f94d92ec409aa866a5079fa17, type: 3}
-    - target: {fileID: 2541742183492447526, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
-      propertyPath: tilemapPrefabs.Array.data[3]
-      value: 
-      objectReference: {fileID: 3866112773676681268, guid: a30cdacd4d91d654eb9c658ce07e4f75, type: 3}
     - target: {fileID: 2697967885744876877, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
       propertyPath: bulletPrefab
       value: 
@@ -243,11 +223,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5660232831766445891, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 5660232831766445891, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 5660232831766445891, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -396,7 +376,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 1, z: -10}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
