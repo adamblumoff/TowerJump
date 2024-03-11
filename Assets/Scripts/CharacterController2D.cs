@@ -87,12 +87,10 @@ public class CharacterController2D : MonoBehaviour
 		//only control the player if grounded or airControl is turned on
 		if (Grounded || AirControl)
 		{
-
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
 			// And then smoothing it out and applying it to the character
 			Rigidbody2D.velocity = Vector3.SmoothDamp(Rigidbody2D.velocity, targetVelocity, ref stop, MovementSmoothing);
-
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !FacingRight)
 			{
@@ -105,6 +103,7 @@ public class CharacterController2D : MonoBehaviour
 				// ... flip the player.
 				Flip();
 			}
+			
 		}
 		// If the player should jump...
 		if (Grounded && jump)
@@ -113,7 +112,7 @@ public class CharacterController2D : MonoBehaviour
 			Grounded = false;
 			Rigidbody2D.AddForce(new Vector2(0f, JumpForce));
 		}
-		if(!Grounded)
+		if(!Grounded) //control in the air
 		{
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, Rigidbody2D.velocity.y);
@@ -142,8 +141,8 @@ public class CharacterController2D : MonoBehaviour
 	{
 		// Switch the way the player is labelled as facing.
 		FacingRight = !FacingRight;
-		transform.Rotate(0f, 180f, 0f);
-
+		transform.Rotate(0f,180f,0);
+		
 	}
 	public void TakeDamage (int damage)
 	{
