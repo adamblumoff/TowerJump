@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource sourceJump;
-    public AudioClip clipJump;
-
-    public AudioSource sourceShoot;
-    public AudioClip clipShoot;
+    public AudioSource audioSource;
+    
+ 
+    public AudioClip clipShoot; 
+    public List<AudioClip> soundList;
 
     public void Update()
     {
         if (Input.GetButtonDown("Jump"))
         {
-            sourceJump.PlayOneShot(clipJump);
+            AudioClip clipJump = getRandomAudioClip();
+            audioSource.PlayOneShot(clipJump);
         }
         if (Input.GetButtonDown("Fire1"))
         {
-            sourceShoot.PlayOneShot(clipShoot);
+            audioSource.PlayOneShot(clipShoot);
         }
+    }
+
+    AudioClip getRandomAudioClip()
+    {
+        int clipIndex = Random.Range(0, soundList.Count);
+        return soundList[clipIndex];
     }
 }
