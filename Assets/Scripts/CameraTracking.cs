@@ -23,8 +23,8 @@ public class CameraTracking : MonoBehaviour
        
        
 
-        // Proceed to adjust the camera's position only if the character is not dead
-       previousYPosition = transform.position.y;
+       //Proceed to adjust the camera's position only if the character is not dead
+       previousYPosition = player.transform.position.y;
        float targetYPosition = Mathf.Max(player.transform.position.y, transform.position.y);
        if(player.transform.position.y - targetYPosition < -5)
        {

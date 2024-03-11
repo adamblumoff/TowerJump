@@ -111,7 +111,7 @@ AnimationClip:
   m_Events:
   - time: 2.1833334
     functionName: LoadScene
-    data: Menu
+    data: GameScene
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

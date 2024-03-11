@@ -14,8 +14,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PauseMenu.unity
     guid: 177fea63b7ed341fc8d8ecaeb480d743
+  - enabled: 0
+    path: Assets/Scenes/GameScene Pause Tester.unity
+    guid: ff87af1a2d2bd4b5f8cec6c4463991a9
+  - enabled: 1
+    path: Assets/Scenes/PauseSceneFinal.unity
+    guid: 358bef4d1457340f78ce21ac3683666e
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b00e8f9cc8dc15b49b0f6bbcff621272, type: 2}

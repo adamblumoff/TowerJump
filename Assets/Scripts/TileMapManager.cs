@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TileMapManager : MonoBehaviour
@@ -11,6 +12,7 @@ public class TileMapManager : MonoBehaviour
     private float renderOffset = 9f; // Units from the top of the tilemap to render the next one 
     private float tilesRendered = 0; // Track number of tiles rendered
     private int index = 0;
+    private Queue<GameObject> instantiatedTilemaps = new Queue<GameObject>(); // Queue to track instantiated tilemaps
     private void Start()
     {
         // Initialize the nextInstantiateY based on the player's starting Y position
@@ -33,10 +35,6 @@ public class TileMapManager : MonoBehaviour
 
         // Select a random prefab from the array
         GameObject prefabToInstantiate = tilemapPrefabs[index];
-        if(index == 3)
-        {
-            index = 0;
-        }
         index++;
 
         // Calculate the new Y position for the next section
@@ -48,14 +46,28 @@ public class TileMapManager : MonoBehaviour
         }
 
         // Instantiate the new tilemap section at the calculated Y position
-        Instantiate(prefabToInstantiate, new Vector3(0, instantiateY, 0), Quaternion.identity);
+        GameObject newTilemap = Instantiate(prefabToInstantiate, new Vector3(0, instantiateY, 0), Quaternion.identity);
         tilesRendered++;
-        
+
+        // Enqueue the new tilemap
+        instantiatedTilemaps.Enqueue(newTilemap);
+
+        // Destroy the oldest tilemap if there are more than two after it
+        if (instantiatedTilemaps.Count > 2)
+        {
+            GameObject oldTilemap = instantiatedTilemaps.Dequeue();
+            Destroy(oldTilemap);
+        }
+
         // Update the nextInstantiateY for the next instantiation
         nextInstantiateY += tilemapHeight;
 
         // Debug to check the instantiation position
         Debug.Log("Instantiated Tilemap at Y: " + instantiateY);
         Debug.Log("Next nextInstantiateY: " + nextInstantiateY);
+        if (index == 15)
+        {
+            Time.timeScale = 0f;
+        }
     }
 }

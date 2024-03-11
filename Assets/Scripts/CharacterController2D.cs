@@ -26,7 +26,6 @@ public class CharacterController2D : MonoBehaviour
 	private Vector3 stop = Vector3.zero;
 	private Animator playerAnimiator;
 	private bool dead = false;
-	private ScoreManager scoreManager;
 	private float y_position;
 	private float current_y_position;
 
@@ -48,7 +47,6 @@ public class CharacterController2D : MonoBehaviour
 			OnLandEvent = new UnityEvent();
 
 		playerAnimiator = GetComponent<Animator>();
-		scoreManager = GetComponent<ScoreManager>();
 		y_position = transform.position.y;
 		
 	}
@@ -78,7 +76,6 @@ public class CharacterController2D : MonoBehaviour
 		}
 		if(current_y_position>y_position)
 		{
-			scoreManager.AddScore(1);
 			y_position = current_y_position;
 		}
 	}
