@@ -25,7 +25,7 @@ public class SoundManager : MonoBehaviour
 
     AudioClip getRandomAudioClip()
     {
-        int clipIndex = Random.Range(0, soundList.Count);
+        int clipIndex = Random.Range(0, soundList.Count-1);
         return soundList[clipIndex];
     }
 }
