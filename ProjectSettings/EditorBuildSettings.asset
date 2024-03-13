@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayerScene.unity
     guid: 32c984bc67f2cc243ae51b0f351062d4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene_Old.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
@@ -23,5 +23,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PauseSceneFinal.unity
     guid: 358bef4d1457340f78ce21ac3683666e
+  - enabled: 1
+    path: Assets/Scenes/GameScene1.unity
+    guid: 31aa0ed81c6a61f4b83092ce1d37ea6f
+  - enabled: 1
+    path: Assets/Scenes/GameScene2.unity
+    guid: d27cc71fdde730843b1ea11894debb02
+  - enabled: 1
+    path: Assets/Scenes/GameScene3.unity
+    guid: eb028dac1913bf143be435ffeab664f9
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b00e8f9cc8dc15b49b0f6bbcff621272, type: 2}

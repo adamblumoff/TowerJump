@@ -4,16 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
-{ 
-
-    public void LoadScene(string GameScene)
+{
+    public string scene;
+    public void LoadScene()
     {
-        SceneManager.LoadScene(GameScene);
+        SceneManager.LoadScene(scene);
     }
 
     public void OnApplicationQuit()
     {
         Application.Quit();
     }
+
 
 }

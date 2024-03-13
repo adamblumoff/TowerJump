@@ -1,22 +1,31 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class PlayerAttach : MonoBehaviour
 {
     public GameObject Player;
-    public Animator MegamanAnimator;
+    public string scene;
+    public TilemapCollider2D tilemapCollider;
 
-    public void OnTriggerEnter(Collider other)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.tag == "movingTile" && MegamanAnimator.GetBool("Isidle"))
+        Debug.Log("collision");
+        if (collision.gameObject.tag == "Player")
         {
-            Player.transform.parent = other.gameObject.transform;
+            Debug.Log("scene loading");
+
+            LoadSpecificScene(scene);
         }
     }
+   
 
-    void OnTriggerExit(Collider other)
+    public void LoadSpecificScene(string scene)
     {
-        Player.transform.parent = null;
+        SceneManager.LoadScene(scene);
     }
 }

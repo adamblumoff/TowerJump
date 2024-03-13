@@ -466,6 +466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GridStart
       objectReference: {fileID: 0}
+    - target: {fileID: 2584780675791870322, guid: 901a0fd1d3b946644b3c14b3e3cc2602, type: 3}
+      propertyPath: m_TileSpriteArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3630184992397652586, guid: 901a0fd1d3b946644b3c14b3e3cc2602, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -525,7 +529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541742183492447526, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
       propertyPath: tilemapPrefabs.Array.size
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2541742183492447526, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
       propertyPath: tilemapPrefabs.Array.data[0]
@@ -546,7 +550,7 @@ PrefabInstance:
     - target: {fileID: 2541742183492447526, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
       propertyPath: tilemapPrefabs.Array.data[4]
       value: 
-      objectReference: {fileID: 3866112773676681268, guid: 86d9cd19f7b60054c881cb70c35231a1, type: 3}
+      objectReference: {fileID: 3866112773676681268, guid: 6649c8e6ed5309c4596860038698c0fa, type: 3}
     - target: {fileID: 2541742183492447526, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
       propertyPath: tilemapPrefabs.Array.data[5]
       value: 
@@ -602,6 +606,10 @@ PrefabInstance:
     - target: {fileID: 3762473098721839035, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
       propertyPath: runSpeed
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475545704819528121, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
+      propertyPath: scene
+      value: GameScene1
       objectReference: {fileID: 0}
     - target: {fileID: 5660232831766445891, guid: 2b9fee24cc83e92409bbe2cc8eea7d5f, type: 3}
       propertyPath: m_LocalScale.x
