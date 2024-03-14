@@ -34,10 +34,10 @@ public class PauseMenu : MonoBehaviour
     }
 
 
-    public void Restart()
+    public void Restart(string scene)
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(scene);
     }
 
     public void Quit() 
